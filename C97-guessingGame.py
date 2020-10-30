@@ -8,10 +8,11 @@ chances = 0
 
 print("Welcome to Number Guessr!")
 print("Choose a number from 1 to 10")
-user_guess = int(input("Enter Your Guess: "))
+
 # This is an infinite loop
 while True:
     # The program runs continuously until one of these happen: (see next comment)
+    user_guess = int(input("Enter Your Guess: "))  # Guess number
 
     if(user_guess < actual_num):
         print("Your guess is too low")
@@ -28,8 +29,5 @@ while True:
         # (2) : if chances are over
         print("Oops! You did not get the number " + str(actual_num))
         break
-
-    # If we did not break from loop then user has to guess again
-    user_guess = int(input("Enter Your Guess: "))
 
     chances += 1  # each time chance increases
